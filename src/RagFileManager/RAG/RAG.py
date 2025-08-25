@@ -34,7 +34,7 @@ class RAGFileManager:
         existing = self.collection.get(ids=[doc_id])
 
         if existing["ids"]:  # already exists
-            print("Already in DB:", doc_id)
+            # print("Already in DB:", doc_id)
             return False
         else:
             embeddings = self.OpenAI_client.embeddings.create(model="text-embedding-3-small",input=doc).data[0].embedding
