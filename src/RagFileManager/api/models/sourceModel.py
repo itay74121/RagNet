@@ -3,11 +3,10 @@ from pydantic import BaseModel
 
 
 
-class userModel(BaseModel):
+class sourceModel(BaseModel):
     id: int
     name: str
-    lastname: str
-    email: str
     created_at: datetime
-    active: bool
-    verified: bool
+    length: int
+    type: str
+    user_id: int 
